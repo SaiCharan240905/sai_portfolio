@@ -44,8 +44,8 @@ const Projects = () => {
       title: 'Personal Portfolio Website',
       description: 'Designed and developed a personal portfolio website to showcase projects, certifications, and experiences. Focused on clean UI, responsive design, and seamless navigation across sections.',
       technologies: ['React', 'HTML', 'CSS', 'JavaScript', 'Vite'],
-      githubUrl: '',
-      liveUrl: '',
+      githubUrl: 'https://github.com/SaiCharan240905/sai_portfolio',
+      liveUrl: 'https://madkisaicharan-portfolio.vercel.app/',
       image: portfolio
     },
   ];
