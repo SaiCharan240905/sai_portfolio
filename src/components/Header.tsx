@@ -28,6 +28,7 @@ const Header = ({ activeSection }: HeaderProps) => {
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
+    { id: 'research', label: 'Research & Publications' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'campus', label: 'Activities' },
     { id: 'contact', label: 'Contact' },

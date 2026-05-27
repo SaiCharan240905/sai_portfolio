@@ -40,3 +40,31 @@
 .read-the-docs {
   color: #888;
 }
+
+/* A: animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0ea5e9, #8b5cf6, #22c55e, #06b6d4);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  opacity: 0.15;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* C: 3D effect helper */
+.perspective {
+  perspective: 1000px;
+}
+
+backdrop-blur-xl {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+body {
+  cursor: none; 
+}

@@ -1,115 +1,190 @@
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel';
+import { useEffect, useState } from 'react';
+import { FaDownload, FaEnvelope } from 'react-icons/fa';
+
 import profile1 from '@/assets/profile-1.jpg';
 import profile2 from '@/assets/profile-2.jpg';
 import profile3 from '@/assets/profile-3.jpg';
+import profile4 from '@/assets/profile-4.jpg';
+import profile5 from '@/assets/profile-5.jpg';
+
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
+
   const downloadResume = () => {
-    const link = document.createElement("a");
-    link.href = "/Resume.pdf";  
-    link.download = "Madki_Sai_Charan_Resume.pdf";
+    const link = document.createElement('a');
+    link.href = '/Resume.pdf';
+    link.download = 'Madki_Sai_Charan_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
-  return <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 hero-gradient opacity-10"></div>
-      
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'Madki_Sai_Charan_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  /* ---------------- A: Typing Effect ---------------- */
+  const roles = [
+    'AI & ML Enthusiast',
+    'Frontend Developer',
+    'Data Analytics Explorer',
+    'Research Contributor'
+  ];
+
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[index % roles.length];
+
+    const timeout = setTimeout(() => {
+      if (!deleting) {
+        setText(current.substring(0, subIndex + 1));
+        setSubIndex(subIndex + 1);
+
+        if (subIndex === current.length) {
+          setDeleting(true);
+        }
+      } else {
+        setText(current.substring(0, subIndex - 1));
+        setSubIndex(subIndex - 1);
+
+        if (subIndex === 0) {
+          setDeleting(false);
+          setIndex(index + 1);
+        }
+      }
+    }, deleting ? 60 : 100);
+
+    return () => clearTimeout(timeout);
+  }, [subIndex, deleting, index]);
+
+  return (
+      <section
+        id="hero"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-28 md:pt-20 z-10"
+      >
+
+      {/* ---------------- B: Animated Gradient Background ---------------- */}
+      <div className="absolute inset-0 animated-gradient"></div>
+
+      {/* Floating tech chips */}
+      <div className="absolute top-24 left-10 bg-primary/10 text-primary px-4 py-1 rounded-full text-xs animate-float">
+        AI / ML
+      </div>
+
+      <div className="absolute top-40 right-12 bg-primary/10 text-primary px-4 py-1 rounded-full text-xs animate-float" style={{ animationDelay: '1s' }}>
+        React.js
+      </div>
+
+      <div className="absolute bottom-24 left-16 bg-primary/10 text-primary px-4 py-1 rounded-full text-xs animate-float" style={{ animationDelay: '2s' }}>
+        Python
+      </div>
+
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto animate-fade-in">
+        <div className="max-w-6xl mx-auto">
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Profile Images Carousel */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-80 max-w-sm">
+
+            {/* ---------------- C: 3D Profile Effect ---------------- */}
+            <div className="flex justify-center lg:justify-end perspective">
+              <div className="w-72 sm:w-80 max-w-sm transform transition-all duration-700 hover:scale-105 hover:rotate-1">
+
                 <Carousel className="w-full">
                   <CarouselContent>
-                    <CarouselItem>
-                      <div className="aspect-square rounded-full overflow-hidden border-4 border-primary/20 hover-lift hover-glow transition-smooth">
-                        <img src={profile1} alt="MADKI SAI CHARAN - Profile 1" className="w-full h-full object-cover" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="aspect-square rounded-full overflow-hidden border-4 border-primary/20 hover-lift hover-glow transition-smooth">
-                        <img src={profile2} alt="MADKI SAI CHARAN - Profile 2" className="w-full h-full object-cover" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="aspect-square rounded-full overflow-hidden border-4 border-primary/20 hover-lift hover-glow transition-smooth">
-                        <img src={profile3} alt="MADKI SAI CHARAN - Profile 3" className="w-full h-full object-cover" />
-                      </div>
-                    </CarouselItem>
+                    {[profile1, profile2, profile3, profile4, profile5].map((img, i) => (
+                      <CarouselItem key={i}>
+                        <div className="aspect-square rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl hover-glow">
+                          <img src={img} className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                    ))}
                   </CarouselContent>
-                  <CarouselPrevious className="left-4" />
-                  <CarouselNext className="right-4" />
+
+                  <CarouselPrevious />
+                  <CarouselNext />
                 </Carousel>
+
               </div>
             </div>
 
-            {/* Text Content */}
+            {/* TEXT */}
             <div className="text-center lg:text-left">
-              {/* Greeting */}
-              <p className="text-lg text-muted-foreground mb-4 animate-slide-up">
+
+              <p className="text-lg text-muted-foreground mb-4 animate-fade-in">
                 Hello, I'm
               </p>
-              
-              {/* Name */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gradient animate-scale-in">
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gradient animate-scale-in">
                 Madki Sai Charan
               </h1>
-              
-              {/* Tagline */}
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slide-up">AI &amp; ML Enthusiast | Frontend Web Developer | Mentor</p>
-              
-              {/* Description */}
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-12 leading-relaxed animate-fade-in">
-                Hi, I’m Sai Charan — passionate about building real-world solutions with Artificial Intelligence, Machine Learning, and 
-                Frontend Web development. I turn ideas into impactful, tech-driven experiences.
+
+              {/* 🔥 Typing animation */}
+              <p className="text-xl md:text-2xl text-primary font-medium mb-6 h-8">
+                {text}
+                <span className="animate-pulse">|</span>
               </p>
-              
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-12 animate-slide-up">
-                <Button size="lg" onClick={downloadResume} className="px-8 py-3 text-lg hover-lift">
-                  Download Resume
-                </Button>
-                <Button variant="outline" size="lg" onClick={scrollToContact} className="px-8 py-3 text-lg hover-lift">
-                  Get In Touch
-                </Button>
+
+              <p className="text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+                Building real-world AI systems, scalable web apps, and intelligent automation solutions
+                with Machine Learning and modern frontend engineering.
+              </p>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-10">
+
+                <button
+                  onClick={downloadResume}
+                  className="px-6 py-3 rounded-xl bg-primary text-white hover:scale-105 transition flex items-center gap-2"
+                >
+                  📄 Resume
+                </button>
+
+                <button
+                  onClick={downloadCV}
+                  className="px-6 py-3 rounded-xl bg-primary text-white hover:scale-105 transition flex items-center gap-2"
+                >
+                  📑 CV
+                </button>
+
+                <button
+                  onClick={scrollToContact}
+                  className="px-6 py-3 rounded-xl border border-primary text-primary hover:bg-primary hover:text-white transition flex items-center gap-2"
+                >
+                  ✉ Contact
+                </button>
+
               </div>
-              
-              {/* Social Media Links */}
-              <div className="flex justify-center lg:justify-start space-x-6 animate-fade-in">
-                <a href="https://www.linkedin.com/in/madki-sai-charan/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover-lift hover-glow transition-smooth">
-                  <span className="text-primary text-xl">in</span>
-                </a>
-                <a href="https://github.com/SaiCharan240905" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover-lift hover-glow transition-smooth">
-                  <span className="text-primary text-xl">gh</span>
-                </a>
-                <a href="mailto:saicharanaiml.edam@gmail.com" className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center hover-lift hover-glow transition-smooth">
-                  <span className="text-primary text-xl">@</span>
-                </a>
-              </div>
+
             </div>
+
           </div>
         </div>
       </div>
-      
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-primary/5 rounded-full animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-primary/5 rounded-full animate-float" style={{
-      animationDelay: '1s'
-    }}></div>
-      <div className="absolute top-1/2 left-5 w-16 h-16 bg-primary/5 rounded-full animate-float" style={{
-      animationDelay: '2s'
-    }}></div>
-    </section>;
+
+      {/* floating background glow blobs */}
+      <div className="absolute top-20 left-10 w-40 h-40 bg-primary/10 blur-3xl rounded-full animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-52 h-52 bg-purple-500/10 blur-3xl rounded-full animate-pulse"></div>
+
+    </section>
+  );
 };
 export default Hero;
