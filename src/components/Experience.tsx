@@ -33,7 +33,7 @@ const Experience = () => {
       type: 'experience',
       title: 'AI Engineer Intern',
       organization: 'Cubixso Solutions Pvt Ltd',
-      duration: 'Jan 2026 – Present',
+      duration: 'Jan 2026 – Jul 2026',
       location: 'Hyderabad, India',
       description: [
         'Developed AI-assisted responsive web applications for client projects using React.js with modern AI development tools.',
@@ -89,7 +89,7 @@ const Experience = () => {
       location: 'Dundigal, Hyderabad, India',
       description: [
         'Stream: B.Tech in CSE - (Artificial Intelligence & Machine Learning)',
-        'CGPA: 9.05/10',
+        'CGPA: 9.10/10',
         'Relevant Coursework: AI & ML, Data Structures and Algorithms, Database Systems and Computer Science related courses'
       ],
       icon: <FaGraduationCap />
@@ -214,7 +214,7 @@ const Experience = () => {
                 </div>
                 <h4 className="font-medium mb-2">Academic Excellence</h4>
                 <p className="text-sm text-muted-foreground">
-                  Maintained a 9.05 CGPA with Academic Excellence recognition and consistent academic performance.
+                  Maintained a 9.10 CGPA with Academic Excellence recognition and consistent academic performance.
                 </p>
               </div>
 

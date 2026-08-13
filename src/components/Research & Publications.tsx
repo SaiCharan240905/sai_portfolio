@@ -18,12 +18,12 @@ const Research = () => {
       title:
         "A Hybrid Rule-Based and Ensemble Machine Learning Framework for Transparent College Admission and Branch Prediction",
 
-      status: "Accepted at ICT4SD 2026",
+      status: "Presented at ICT4SD 2026",
 
       year: "2026",
 
       description:
-        "Proposed a hybrid AI-based admission prediction framework integrating ensemble machine learning and policy-aware recommendation mechanisms for transparent decision support systems.",
+        "Proposed a hybrid rule-based and ensemble machine learning framework for transparent engineering branch prediction and admission decision support. Developed a web-based platform for accurate and policy-aware admission recommendations.",
 
       technologies: [
         "Machine Learning",
@@ -41,15 +41,14 @@ const Research = () => {
     },
 
     {
-      title:
-        "Multi-Agent Attendance Monitoring and Notification System Using Adaptive Dynamic Templates",
+      title: "An Intelligent Multi-Agent Framework for Attendance Monitoring and Notification Using Adaptive Dynamic Templates",
 
-      status: "Under Review for IEEE Conference Publication",
+      status: "Presented at ICCET 2026",
 
       year: "2026",
 
       description:
-        "Designed a multi-agent attendance automation framework using RelayOS with intelligent workflow orchestration, adaptive notifications, and automated communication pipelines.",
+        "Designed a multi-agent framework for automated attendance monitoring, shortage detection, and personalized notification management. Developed adaptive dynamic templates and multi-channel communication workflows for automated attendance-related processes",
 
       technologies: [
         "RelayOS",
@@ -59,9 +58,9 @@ const Research = () => {
         "Flask",
       ],
 
-      type: "Research Work",
+      type: "Conference Paper",
 
-      paperUrl: "https://www.ieee.org/publications-research",
+      paperUrl: "https://iccet2026.in/",
 
       icon: <FaBrain className="w-5 h-5" />,
     },
@@ -75,7 +74,7 @@ const Research = () => {
       year: "2026",
 
       description:
-        "Developed an AI-driven career recommendation framework using machine learning and predictive analytics for personalized career path discovery and intelligent recommendations.",
+        "Proposed a hybrid intelligence framework for personalized career path discovery using user skills, interests, and academic performance. Applied machine learning and recommendation mechanisms to generate data-driven career path suggestions.",
 
       technologies: [
         "Machine Learning",
@@ -84,7 +83,7 @@ const Research = () => {
         "Recommendation Systems",
       ],
 
-      type: "Research Work",
+      type: "Conference Paper",
 
       paperUrl: "https://www.ieee.org/publications-research",
 

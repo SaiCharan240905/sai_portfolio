@@ -201,6 +201,10 @@ const CampusActivities = () => {
 
             <div className="flex flex-wrap justify-center gap-4">
               <Badge variant="outline" className="px-4 py-2">
+                <FaTrophy className="mr-2" /> Best Paper Presentation – ICCET 2026
+              </Badge>
+              
+              <Badge variant="outline" className="px-4 py-2">
                 <FaTrophy className="mr-2" /> Academic Excellence Award 2026 – IARE
               </Badge>
 
@@ -209,15 +213,15 @@ const CampusActivities = () => {
               </Badge>
 
               <Badge variant="outline" className="px-4 py-2">
-                <FaBook className="mr-2" /> 7.0 Band in IELTS
+                <FaBook className="mr-2" /> IELTS – Band 7.0
               </Badge>
 
               <Badge variant="outline" className="px-4 py-2">
-                <FaMedal className="mr-2" /> Gold Medal — Level-1 NASO Exam
+                <FaMedal className="mr-2" /> Gold Medal – Level-1 NASO Examination
               </Badge>
 
               <Badge variant="outline" className="px-4 py-2">
-                <FaCalculator className="mr-2" /> Srinivasa Ramanujan Award — Maths Olympiad
+                <FaCalculator className="mr-2" /> Srinivasa Ramanujan Award – Mathematics Olympiad 
               </Badge>
             </div>
           </div>

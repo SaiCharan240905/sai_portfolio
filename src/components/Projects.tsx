@@ -7,6 +7,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import PraveshPath from '@/assets/PraveshPath.png';
 import CareerSenseAI from '@/assets/CareerSenseAI.png';
 import IntelliAttend from '@/assets/IntelliAttend.png';
+import EduNotify from '@/assets/EduNotify.png';
 import dab from '@/assets/dab.png';
 import Employeeperformance from '@/assets/Employeeperformance.png';
 import portfolio from '@/assets/portfolio.png';
@@ -34,23 +35,22 @@ const Projects = () => {
       image: PraveshPath
     },
     {
-      title: 'CareerSense AI: Intelligent Career Recommendation System',
+      title:
+        'EduNotify AI: Intelligent Student Communication and Email Automation System',
       description:
-        'Built an AI-driven career recommendation platform using machine learning and predictive analytics to analyze skills, interests, and academic performance for personalized career path suggestions with 92% prediction accuracy.',
+        'Developed an intelligent workflow automation system using n8n, Google Sheets, and Gmail API to automate personalized academic email notifications, conditionally handle PDF attachments, and track delivery status for large student groups.',
       technologies: [
-        'Python',
-        'Machine Learning',
-        'Scikit-learn',
-        'Decision Trees',
-        'Random Forest',
-        'K-Means',
+        'n8n',
+        'Google Sheets',
+        'Gmail API',
+        'OAuth 2.0',
         'HTML',
-        'CSS',
-        'JavaScript'
+        'Workflow Automation'
       ],
-      githubUrl: 'https://github.com/SaiCharan240905/CareerSense-AI',
-      liveUrl: 'https://career-compass-ai-018.vercel.app/',
-      image: CareerSenseAI
+      githubUrl:
+        'https://github.com/SaiCharan240905/EduNotify-AI-Intelligent-Student-Communication-and-Email-Automation-System',
+      liveUrl: '',
+      image: EduNotify
     },
     {
       title: 'IntelliAttend: Multi-Agent Attendance Automation System',
@@ -72,6 +72,25 @@ const Projects = () => {
         'https://github.com/SaiCharan240905/Multi-Agent-Attendance-Monitoring-and-Notification-System-Using-Adaptive-Dynamic-Templates',
       liveUrl: 'https://relayos.vercel.app/',
       image: IntelliAttend
+    },
+    {
+      title: 'CareerSense AI: Intelligent Career Recommendation System',
+      description:
+        'Built an AI-driven career recommendation platform using machine learning and predictive analytics to analyze skills, interests, and academic performance for personalized career path suggestions with 92% prediction accuracy.',
+      technologies: [
+        'Python',
+        'Machine Learning',
+        'Scikit-learn',
+        'Decision Trees',
+        'Random Forest',
+        'K-Means',
+        'HTML',
+        'CSS',
+        'JavaScript'
+      ],
+      githubUrl: 'https://github.com/SaiCharan240905/CareerSense-AI',
+      liveUrl: 'https://career-compass-ai-018.vercel.app/',
+      image: CareerSenseAI
     },
     {
       title: 'Diamond Association Bangalore – Website Clone',
