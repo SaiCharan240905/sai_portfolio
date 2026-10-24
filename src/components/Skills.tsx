@@ -32,7 +32,7 @@ const Skills = () => {
     {
       title: 'Programming Languages',
       icon: <FaCodeIcon />,
-      skills: ['Java', 'Python', 'MySQL']
+      skills: ['Java', 'Python', 'SQL']
     },
     {
       title: 'AI, ML & GenAI Tools',

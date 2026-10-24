@@ -10,11 +10,23 @@ import {
   FaBrain,
   FaMicrosoft,
   FaAws,
-  FaLayerGroup
+  FaLayerGroup,
+  FaDatabase
 } from 'react-icons/fa';
 
 const Certifications = () => {
   const certifications = [
+      {
+      title: 'Generative AI Essentials: Using LLMs to Work with Data',
+      issuer: 'IBM SkillsBuild',
+      date: '2026',
+      category: 'Artificial Intelligence',
+      skills: ['AI Prompting Techniques', 'Prompt Engineering', 'Generative AI', 'Data Analysis'],
+      credentialUrl: 'https://www.credly.com/badges/1b2538df-6b53-48ad-82eb-be898bb3ec9a/public_url',
+      description:
+        'Completed the fundamentals of data classification using IBM tools, including prompt engineering techniques for large language models (LLMs) and ethical considerations in AI applications.',
+      icon: <FaDatabase className="w-5 h-5" />
+    },
     {
       title: 'Artificial Intelligence Fundamentals',
       issuer: 'IBM SkillsBuild',

@@ -3,10 +3,10 @@ import { FaRobot, FaCode, FaBook, FaUsers } from 'react-icons/fa';
 
 const About = () => {
   const achievements = [
-    { number: '5+', label: 'Projects Completed' },
+    { number: '4+', label: 'Projects Completed' },
     { number: '8+', label: 'Certifications' },
     { number: '10+', label: 'Events Organized' },
-    { number: '3+', label: 'Years Experience' },
+    { number: '2+', label: 'Years Experience' },
   ];
 
   return (
@@ -26,15 +26,13 @@ const About = () => {
             <div className="space-y-6 animate-slide-up">
               <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I’m an Artificial Intelligence & Machine Learning student passionate about building intelligent systems that solve real-world problems through technology, research, and innovation. 
-                My interests span machine learning, predictive analytics, intelligent automation, and AI-driven web applications.
+                I’m an Artificial Intelligence & Machine Learning student interested in building practical solutions to real-world problems through technology and research. My interests include machine learning, predictive analytics, intelligent automation, and AI-driven web applications.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Through internships, research work, and hands-on projects, I have developed AI-powered recommendation systems, workflow automation frameworks, and data-driven applications using Python, React.js, Flask, and machine learning technologies.
+                Through internships, research, and hands-on projects, I’ve worked on recommendation systems, workflow automation, and data-driven applications using Python, React.js, Flask, and machine learning technologies.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Beyond technical development, I enjoy mentoring peers, contributing to collaborative communities, and organizing technical initiatives that encourage learning and innovation. 
-                I’m continuously exploring emerging technologies and research opportunities in Artificial Intelligence and Software Engineering.
+                Beyond development, I enjoy mentoring peers, collaborating with others, and organizing technical activities that support learning and knowledge sharing. I’m continuously learning and exploring opportunities in Artificial Intelligence and Software Engineering.
               </p>
             </div>
 

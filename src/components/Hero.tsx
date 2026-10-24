@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';    
 import {
   Carousel,
   CarouselContent,
@@ -9,7 +9,7 @@ import {
 import { useEffect, useState } from 'react';
 import { FaDownload, FaEnvelope } from 'react-icons/fa';
 
-import profile1 from '@/assets/profile-1.jpg';
+import profile1 from '@/assets/profile-1.png';
 import profile2 from '@/assets/profile-2.jpg';
 import profile3 from '@/assets/profile-3.jpg';
 import profile4 from '@/assets/profile-4.jpg';
@@ -44,7 +44,8 @@ const Hero = () => {
     'AI & ML Enthusiast',
     'Frontend Developer',
     'Data Analytics Explorer',
-    'Research Contributor'
+    'Research Contributor',
+    'Student Mentor'
   ];
 
   const [text, setText] = useState('');
@@ -88,7 +89,7 @@ const Hero = () => {
 
       {/* Floating tech chips */}
       <div className="absolute top-24 left-10 bg-primary/10 text-primary px-4 py-1 rounded-full text-xs animate-float">
-        AI / ML
+        AI & ML
       </div>
 
       <div className="absolute top-40 right-12 bg-primary/10 text-primary px-4 py-1 rounded-full text-xs animate-float" style={{ animationDelay: '1s' }}>
@@ -96,6 +97,10 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-24 left-16 bg-primary/10 text-primary px-4 py-1 rounded-full text-xs animate-float" style={{ animationDelay: '2s' }}>
+        Java
+      </div>
+
+      <div className="absolute bottom-32 right-20 bg-primary/10 text-primary px-4 py-1 rounded-full text-xs animate-float" style={{ animationDelay: '3s' }}>
         Python
       </div>
 
@@ -144,8 +149,7 @@ const Hero = () => {
               </p>
 
               <p className="text-lg text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-                Building real-world AI systems, scalable web apps, and intelligent automation solutions
-                with Machine Learning and modern frontend engineering.
+                Building Intelligent AI Systems, Scalable Web Applications, and Smart Automation Solutions. Leveraging Machine Learning and modern frontend engineering to turn ideas into practical, real-world solutions.
               </p>
 
               {/* Buttons */}
@@ -155,21 +159,21 @@ const Hero = () => {
                   onClick={downloadResume}
                   className="px-6 py-3 rounded-xl bg-primary text-white hover:scale-105 transition flex items-center gap-2"
                 >
-                  📄 Resume
+                  Resume
                 </button>
 
                 <button
                   onClick={downloadCV}
                   className="px-6 py-3 rounded-xl bg-primary text-white hover:scale-105 transition flex items-center gap-2"
                 >
-                  📑 CV
+                  CV
                 </button>
 
                 <button
                   onClick={scrollToContact}
                   className="px-6 py-3 rounded-xl border border-primary text-primary hover:bg-primary hover:text-white transition flex items-center gap-2"
                 >
-                  ✉ Contact
+                  Contact
                 </button>
 
               </div>
