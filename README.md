@@ -1,73 +1,96 @@
-# Welcome to your Lovable project
+# Madki Sai Charan | Personal Portfolio
 
-## Project info
+A personal portfolio website showcasing my projects, technical skills, certifications, and professional experience. Designed with a clean user interface, responsive layouts, and smooth navigation to present my work and development journey.
 
-**URL**: https://lovable.dev/projects/6215f1ba-1c24-41fa-90f7-6d91d58292e6
+## 🌐 Live Portfolio
 
-## How can I edit this code?
+**[Visit My Portfolio](https://madkisaicharan-portfolio.vercel.app/)**
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- Personal introduction and professional profile
+- Projects and technical skills showcase
+- Certifications and experience
+- Responsive user interface
+- Clean design and intuitive navigation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6215f1ba-1c24-41fa-90f7-6d91d58292e6) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend:** React, TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Code Quality:** ESLint
 
-**Use your preferred IDE**
+## 📁 Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```text
+sai_portfolio/
+├── public/             # Public static assets
+├── src/                # Application source code
+├── index.html          # HTML entry point
+├── package.json        # Dependencies and scripts
+├── vite.config.ts      # Vite configuration
+├── tailwind.config.ts  # Tailwind CSS configuration
+├── tsconfig.json       # TypeScript configuration
+└── README.md           # Project documentation
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js
+- npm
+- Git
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. Clone the repository:
 
-This project is built with:
+   ```bash
+   git clone https://github.com/SaiCharan240905/sai_portfolio.git
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+2. Navigate to the project directory:
 
-## How can I deploy this project?
+   ```bash
+   cd sai_portfolio
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/6215f1ba-1c24-41fa-90f7-6d91d58292e6) and click on Share -> Publish.
+3. Install dependencies:
 
-## Can I connect a custom domain to my Lovable project?
+   ```bash
+   npm install
+   ```
 
-Yes, you can!
+4. Start the development server:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+   ```bash
+   npm run dev
+   ```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+5. Open the local URL displayed in your terminal.
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+## 🎯 Objective
+
+To create a professional online presence that highlights my technical capabilities, projects, achievements, and continuous learning as an aspiring software and AI professional.
+
+## 👨‍💻 Author
+
+**Sai Charan**
+
+- GitHub: [SaiCharan240905](https://github.com/SaiCharan240905)
+- Portfolio: [madkisaicharan-portfolio.vercel.app](https://madkisaicharan-portfolio.vercel.app/)
+
+---
+
+<p align="center">
+  Built with React, TypeScript, and ❤️
+</p>
